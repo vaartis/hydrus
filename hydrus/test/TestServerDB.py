@@ -405,9 +405,9 @@ class TestServerDB( unittest.TestCase ):
         
         # petition with regular
         
-        tag_1_petition_hashes = random.sample( set( tag_1_hashes ).difference( tag_1_deletee_hashes ), 15 )
-        tag_2_petition_hashes = random.sample( set( tag_2_hashes ).difference( tag_2_deletee_hashes ), 25 )
-        tag_2a_petition_hashes = random.sample( set( tag_2_hashes ).difference( tag_2_deletee_hashes ).difference( tag_2_petition_hashes ), 10 )
+        tag_1_petition_hashes = random.sample( sorted( set( tag_1_hashes ).difference( tag_1_deletee_hashes ) ), 15 )
+        tag_2_petition_hashes = random.sample( sorted( set( tag_2_hashes ).difference( tag_2_deletee_hashes ) ), 25 )
+        tag_2a_petition_hashes = random.sample( sorted( set( tag_2_hashes ).difference( tag_2_deletee_hashes ).difference( tag_2_petition_hashes ) ), 10 )
         
         client_to_server_update = HydrusNetwork.ClientToServerUpdate()
         
