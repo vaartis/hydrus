@@ -716,7 +716,7 @@ class TestPredicateValueExtraction( unittest.TestCase ):
         
         num = system_predicate.ExtractValueFromMediaResult( fake_media_result )
         
-        self.assertNotEquals( num, 0 )
+        self.assertNotEqual( num, 0 )
         self.assertEqual( num, len( fake_media_result.GetTagsManager().GetCurrentAndPending( CC.COMBINED_TAG_SERVICE_KEY, ClientTags.TAG_DISPLAY_DISPLAY_ACTUAL ) ) )
         
         # num_urls
